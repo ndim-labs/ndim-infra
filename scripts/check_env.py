@@ -4,7 +4,7 @@
     !python scripts/check_env.py                  # Colab
 
 Prints the hardware/software facts everyone should paste into the research log,
-and, if WANDB_API_KEY is set, logs a tiny test run to the shared W&B project.
+and, if WANDB_API_KEY is set, logs a tiny test run to your W&B account.
 """
 
 import os
@@ -14,8 +14,8 @@ import time
 
 import torch
 
-WANDB_ENTITY = os.environ.get("WANDB_ENTITY", "ndim-labs")
-WANDB_PROJECT = os.environ.get("WANDB_PROJECT", "week0-setup")
+WANDB_ENTITY = os.environ.get("WANDB_ENTITY")  # None = your personal W&B account
+WANDB_PROJECT = os.environ.get("WANDB_PROJECT", "ndim-week0-setup")
 
 
 def gpu_report():
@@ -66,7 +66,7 @@ def main():
         run = wandb.init(entity=WANDB_ENTITY, project=WANDB_PROJECT, job_type="env-check", config=info)
         run.log({"matmul_tflops": info.get("matmul_tflops", 0)})
         run.finish()
-        print(f"W&B: logged env-check to {WANDB_ENTITY}/{WANDB_PROJECT}")
+        print(f"W&B: logged env-check: {run.url}")
     else:
         print("W&B: WANDB_API_KEY not set -- skipped test run")
 

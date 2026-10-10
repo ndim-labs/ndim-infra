@@ -9,7 +9,7 @@ Week 0 is setup only. It's done when every box is ticked.
 **Org (Upendra)**
 - [ ] Create this repo as `ndim-labs/ndim-infra` (private) and push this folder
 - [ ] Invite the team to the GitHub org
-- [ ] Create a W&B team `ndim-labs` and invite the team (check the plan covers 4 seats)
+- [ ] W&B: complete the academic application for team `ndim-labs`, then invite the team
 - [ ] Create a shared Google Drive folder `ndim-labs/` for checkpoints and datasets
 
 **Everyone**
@@ -51,7 +51,8 @@ uv run python scripts/check_env.py
 
 ## W&B
 
-- Entity `ndim-labs`. Use one project per rung, e.g. `p1-nanogpt` or `p2-grpo-math`.
+- Team `ndim-labs` on W&B (CoreWeave Forge, academic plan). Everyone logs there: set `WANDB_ENTITY=ndim-labs`.
+- One project per rung, e.g. `p1-nanogpt`. Paste the run link into your research-log entry.
 - Name runs `<who>-<what>-<n>`, e.g. `upendra-lora-r16-2`.
 - Every run gets a matching `research-log/` entry that links the W&B run.
 
