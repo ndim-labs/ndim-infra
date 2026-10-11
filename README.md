@@ -10,7 +10,7 @@ Week 0 is setup only. It's done when every box is ticked.
 - [ ] Create this repo as `ndim-labs/ndim-infra` and push this folder
 - [ ] Invite the team to the GitHub org
 - [ ] W&B: complete the academic application for team `ndim-labs`, then invite the team
-- [ ] Create a shared Google Drive folder `ndim-labs/` for checkpoints and datasets
+- [ ] Create a shared Google Drive folder `nDimensions.AI/ndims-labs/` for checkpoints and datasets
 
 **Everyone**
 - [ ] Get Colab Pro on your own account (subscriptions can't be shared)
