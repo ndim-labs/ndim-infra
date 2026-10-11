@@ -7,9 +7,9 @@ Shared environment, compute rules and research log for nDimensions.AI's LLM engi
 Week 0 is setup only. It's done when every box is ticked.
 
 **Org (Upendra)**
-- [ ] Create this repo as `ndim-labs/ndim-infra` and push this folder
+- [x] Create this repo as `ndim-labs/ndim-infra` and push this folder
 - [ ] Invite the team to the GitHub org
-- [ ] W&B: complete the academic application for team `ndim-labs`, then invite the team
+- [x] W&B: complete the academic application for team `ndim-labs`, then invite the team
 - [ ] Create a shared Google Drive folder `nDimensions.AI/ndims-labs/` for checkpoints and datasets
 
 **Everyone**
@@ -17,6 +17,41 @@ Week 0 is setup only. It's done when every box is ticked.
 - [ ] Add `WANDB_API_KEY` to Colab Secrets, then run `colab/bootstrap.ipynb` end to end
 - [ ] If you have a local NVIDIA GPU, follow the local setup below and run `scripts/check_env.py`
 - [ ] Write your first research-log entry: copy `research-log/TEMPLATE.md` and record your env-check output
+
+## Week 0 results: environment check (2026-10-11)
+
+We ran `scripts/check_env.py` on both machines to prove the pipeline works end to end
+(GitHub → Colab or laptop → Google Drive → W&B) and to measure raw GPU speed.
+W&B project: `ndim-labs / ndim-week0-setup`.
+
+![All three runs in W&B](docs/images/week0-all-runs.png)
+
+| W&B run | Machine | GPU | VRAM | Precision | Speed (TFLOPS) | What it shows |
+|---|---|---|---|---|---|---|
+| `charmed-pond-1` | Colab Pro | Tesla T4 (compute 7.5) | 14.6 GB | bf16 (emulated) | ~2.5 | Bug: the T4 has no bf16 hardware, so PyTorch emulated it slowly |
+| `earthy-valley-2` | Colab Pro | Tesla T4 (compute 7.5) | 14.6 GB | **fp16** | **24.9** | After the fix: the T4's real speed, about 10× faster |
+| `resilient-tree-3` | Laptop | RTX 3050 6GB Laptop (compute 8.6) | 6.0 GB | bf16 | ~5 | Works, but power-limited. An earlier plugged-in run measured 17.1 |
+
+The first run, before the fix:
+
+![Run 1: T4 with emulated bf16](docs/images/week0-run1-t4-bf16.png)
+
+**Takeaways**
+- On a **T4, train in fp16**, never bf16. On the laptop (Ampere), bf16 is fine.
+- The T4 is our workhorse: about 1.5× the laptop's best speed and 2.4× its memory.
+- The laptop's speed depends heavily on power. Plug it in and set Windows to *Best performance* before local runs.
+- Colab runs torch 2.11 and the laptop runs 2.14. Fine for Phase 1, but check versions if results ever differ.
+
+**Quick definitions**
+- **GPU:** a processor built for many parallel math operations, which is what neural-network training is.
+- **VRAM:** the GPU's own memory. The model, its gradients and the data batch must all fit in it.
+- **TFLOPS:** trillions of floating-point operations per second, a measure of raw GPU speed.
+- **Matmul:** matrix multiplication, the core operation inside every neural network; our speed test multiplies two 4096×4096 matrices.
+- **fp16 / bf16:** 16-bit number formats that halve memory use and speed up training compared with 32-bit. bf16 has a wider range and is more stable, but needs an Ampere-generation GPU (compute capability 8.0 or higher).
+- **Compute capability:** NVIDIA's GPU generation number. 7.5 is Turing (T4); 8.x is Ampere (RTX 30-series, A100).
+- **CUDA:** NVIDIA's software layer that lets PyTorch run on the GPU.
+- **W&B (Weights & Biases):** a website that records every training run (settings, metrics, charts) so runs can be compared later.
+- **Colab Pro:** Google's paid notebook service with cloud GPUs (T4, L4, A100), billed in compute units.
 
 ## Compute: where each rung runs
 
