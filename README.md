@@ -6,7 +6,7 @@ Shared environment, compute rules and research log for nDimensions.AI's LLM engi
 
 Week 0 is setup only. It's done when every box is ticked.
 
-**Org (Upendra)**
+**Org (nDimensions.AI)**
 - [x] Create this repo as `ndim-labs/ndim-infra` and push this folder
 - [ ] Invite the team to the GitHub org
 - [x] W&B: complete the academic application for team `ndim-labs`, then invite the team
