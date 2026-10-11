@@ -28,7 +28,8 @@ def gpu_report():
         "gpu": props.name,
         "vram_gb": round(vram_gb, 1),
         "compute_capability": f"{props.major}.{props.minor}",
-        "bf16": torch.cuda.is_bf16_supported(),
+        # T4/V100 (< 8.0) report bf16 "supported" but emulate it slowly; use fp16 there.
+        "bf16": props.major >= 8 and torch.cuda.is_bf16_supported(),
         "cuda_runtime": torch.version.cuda,
     }
     for k, v in info.items():
