@@ -42,7 +42,8 @@ Default to T4/L4 and save the A100 for runs that need it.
 
 ```bash
 uv sync
-uv run python scripts/check_env.py
+cp .env.example .env   # then put your W&B key in .env (gitignored, never commit it)
+uv run --env-file .env python scripts/check_env.py
 ```
 
 `uv.lock` pins every package (torch 2.14.1 + CUDA 13.0 wheels). Windows caveats:
