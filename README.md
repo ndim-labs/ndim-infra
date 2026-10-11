@@ -7,14 +7,14 @@ Shared environment, compute rules and research log for nDimensions.AI's LLM engi
 Week 0 is setup only. It's done when every box is ticked.
 
 **Org (Upendra)**
-- [ ] Create this repo as `ndim-labs/ndim-infra` (private) and push this folder
+- [ ] Create this repo as `ndim-labs/ndim-infra` and push this folder
 - [ ] Invite the team to the GitHub org
 - [ ] W&B: complete the academic application for team `ndim-labs`, then invite the team
 - [ ] Create a shared Google Drive folder `ndim-labs/` for checkpoints and datasets
 
 **Everyone**
 - [ ] Get Colab Pro on your own account (subscriptions can't be shared)
-- [ ] Add `GH_TOKEN` and `WANDB_API_KEY` to Colab Secrets, then run `colab/bootstrap.ipynb` end to end
+- [ ] Add `WANDB_API_KEY` to Colab Secrets, then run `colab/bootstrap.ipynb` end to end
 - [ ] If you have a local NVIDIA GPU, follow the local setup below and run `scripts/check_env.py`
 - [ ] Write your first research-log entry: copy `research-log/TEMPLATE.md` and record your env-check output
 
@@ -58,6 +58,6 @@ uv run python scripts/check_env.py
 
 ## Rules
 
-- No secrets in git or notebooks. Use Colab Secrets or a local `.env` (gitignored).
+- No secrets in git or notebooks. This repo is **public**. Use Colab Secrets or a local `.env` (gitignored).
 - No checkpoints or datasets in git. Store them on Drive or as W&B artifacts.
 - Before claiming an improvement: held-out test set and three seeds.
