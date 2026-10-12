@@ -8,7 +8,7 @@ Each episode: **Learn** → **Hands-on** → research-log entry. Between episode
 
 | Ep | Date | Topic | Learn | Hands-on |
 |---|---|---|---|---|
-| 01 | Mon 12 Oct | **Welcome to Decoding Language Models** | Roadmap, tools tour (Colab, W&B, ndim-infra) | Setup done ✅. Homework: Karpathy “Let's build GPT” + Attention paper §3 |
+| 01 | Mon 12 Oct | **Welcome to Decoding Language Models** | Roadmap, tools tour (Colab, W&B, ndim-infra) | Setup done ✅. Homework: Karpathy [“Let's build GPT”](https://www.youtube.com/watch?v=kCc8FmEb1nY) + [Attention paper](https://arxiv.org/abs/1706.03762) §3 |
 
 ## Phase 1 · Foundations
 
