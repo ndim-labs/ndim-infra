@@ -2,6 +2,8 @@
 
 Shared environment, compute rules and research log for nDimensions.AI's LLM engineering roadmap.
 
+**Webinar series:** [Decoding Language Models](docs/DECODING-LANGUAGE-MODELS-SERIES.md) — 24 episodes, every alternate day, 12 Oct → 27 Nov 2026.
+
 ## Week 0 checklist
 
 Week 0 is setup only. It's done when every box is ticked.
