@@ -8,7 +8,7 @@ Each episode: **Learn** → **Hands-on** → research-log entry. Between episode
 
 | Ep | Date | Topic | Learn | Hands-on |
 |---|---|---|---|---|
-| 01 | Mon 12 Oct | **Welcome to Decoding Language Models** | Roadmap, tools tour (Colab, W&B, ndim-infra) | Setup done ✅. Homework: Karpathy [“Let's build GPT”](https://www.youtube.com/watch?v=kCc8FmEb1nY) + [Attention paper](https://arxiv.org/abs/1706.03762) §3 |
+| 01 | Mon 12 Oct | **Welcome to Decoding Language Models** | Roadmap, tools tour (Colab, W&B, ndim-infra) | Setup done ✅. Homework: Karpathy [“Let's build GPT”](https://www.youtube.com/watch?v=kCc8FmEb1nY) + [Attention paper](https://arxiv.org/html/1706.03762v7) §3 |
 
 ## Phase 1 · Foundations
 
@@ -18,7 +18,7 @@ Dates for Episodes 02–07 are set once preparation is complete; later phases sh
 
 | Ep | Stage | Format | Topic | Content | Code |
 |---|---|---|---|---|---|
-| — | **Preparation** | Solo practice | Watch, read, run | Karpathy [“Let's build GPT”](https://www.youtube.com/watch?v=kCc8FmEb1nY) · [Attention paper](https://arxiv.org/abs/1706.03762) §3 · [Colab notebook](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing) · [ng-video-lecture](https://github.com/karpathy/ng-video-lecture) · [nanoGPT](https://github.com/karpathy/nanoGPT) README | Karpathy's, Shakespeare |
+| — | **Preparation** | Solo practice | Watch, read, run | Karpathy [“Let's build GPT”](https://www.youtube.com/watch?v=kCc8FmEb1nY) · [Attention paper](https://arxiv.org/html/1706.03762v7) §3 · [Colab notebook](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing) · [ng-video-lecture](https://github.com/karpathy/ng-video-lecture) · [nanoGPT](https://github.com/karpathy/nanoGPT) README | Karpathy's, Shakespeare |
 | 02 | **1.1a** | Webinar, live coding | From data to self-attention | Data → bigram → attention trick → self-attention (paper §3.2) | Our improved notebook |
 | 03 | **1.1b** | Webinar, live coding | The full Transformer | Multi-head → Block → full GPT → training (paper §3.1, 3.3, 3.5) | Our improved notebook |
 | 04 | **1.2 (part 1)** | Webinar + build | Serious nanoGPT → Shaer-GPT (شاعر) | Our own GPT on classical Arabic poetry; tokenization and the Arabic token tax; nanoGPT as the answer key | Ours, Arabic |
