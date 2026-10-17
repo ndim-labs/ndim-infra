@@ -12,21 +12,22 @@ Each episode: **Learn** → **Hands-on** → research-log entry. Between episode
 
 ## Phase 1 · Foundations
 
-**Repo:** [ndim-labs/p1-gpt-from-scratch](https://github.com/ndim-labs/p1-gpt-from-scratch) · **Status:** 🟡 preparation in progress
+**Repo:** [ndim-labs/p1-gpt-from-scratch](https://github.com/ndim-labs/p1-gpt-from-scratch) · **Status:** ✅ organizer preparation done · 🟡 next: 1.0 session
 Phase 1 goes from *watching* a GPT being built, to *building* our own, to *adapting* a real pretrained model.
 Dates for Episodes 02–07 are set once preparation is complete; later phases shift by the same amount.
 
 | Ep | Stage | Format | Topic | Content | Code |
 |---|---|---|---|---|---|
-| — | **Preparation** | Solo practice | Watch, read, run | Karpathy [“Let's build GPT”](https://www.youtube.com/watch?v=kCc8FmEb1nY) · [Attention paper](https://arxiv.org/html/1706.03762v7) §3 · [Colab notebook](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing) · [ng-video-lecture](https://github.com/karpathy/ng-video-lecture) · [nanoGPT](https://github.com/karpathy/nanoGPT) README | Karpathy's, Shakespeare |
-| 02 | **1.1a** | Webinar, live coding | From data to self-attention | Data → bigram → attention trick → self-attention (paper §3.2) | Our improved notebook |
-| 03 | **1.1b** | Webinar, live coding | The full Transformer | Multi-head → Block → full GPT → training (paper §3.1, 3.3, 3.5) | Our improved notebook |
-| 04 | **1.2 (part 1)** | Webinar + build | Serious nanoGPT → Shaer-GPT (شاعر) | Our own GPT on classical Arabic poetry; tokenization and the Arabic token tax; nanoGPT as the answer key | Ours, Arabic |
-| 05 | **1.2 (part 2)** | Webinar + build | Training like nanoGPT | AdamW, warmup + cosine LR, gradient accumulation, fp16/bf16, checkpoints, W&B | Ours, Arabic |
+| 02 | **1.0 · Preparation** | Live group session | Basics + the Attention paper | Language-model basics and a guided walk through [Attention Is All You Need](https://arxiv.org/html/1706.03762v7) §3, while everyone runs Karpathy's [`gpt_dev.ipynb`](https://github.com/ndim-labs/p1-gpt-from-scratch/tree/main/1.0-preparation) | Karpathy's, Shakespeare |
+| 03 | **1.1a** | Webinar, live coding | From data to self-attention | Data → bigram → attention trick → self-attention (paper §3.2) | Our improved notebook |
+| 04 | **1.1b** | Webinar, live coding | The full Transformer | Multi-head → Block → full GPT → training (paper §3.1, 3.3, 3.5) | Our improved notebook |
+| 05 | **1.2** | Webinar + build | Serious nanoGPT → Shaer-GPT (شاعر) | Our own GPT on classical Arabic poetry with nanoGPT-quality training; the Arabic token tax; nanoGPT as the answer key | Ours, Arabic |
 | 06 | **1.3** | Webinar + build | Full fine-tune vs LoRA vs QLoRA | Qwen 0.5B, the same data three ways: the bridge to Phase 2 ([LoRA](https://arxiv.org/abs/2106.09685), [QLoRA](https://arxiv.org/abs/2305.14314)) | Hugging Face `peft` |
 | 07 | **Gate 1** | Review | Phase 1 review | Shaer-GPT demo + fine-tuning comparison table + team presentations | — |
 
-**Preparation is done when** the self-check in the [Phase 1 README](https://github.com/ndim-labs/p1-gpt-from-scratch#self-check-ready-for-11a) is all ticked.
+**Self-paced extras** (optional, alongside 1.0): Karpathy's [“Let's build GPT”](https://www.youtube.com/watch?v=kCc8FmEb1nY) · [ng-video-lecture](https://github.com/karpathy/ng-video-lecture) · [nanoGPT](https://github.com/karpathy/nanoGPT) README
+
+**Ready for 1.1a when** the notebook runs and the 1.0 homework questions are answered ([1.0 README](https://github.com/ndim-labs/p1-gpt-from-scratch/tree/main/1.0-preparation#homework-after-the-session)).
 
 ## Phase 2 · Alignment & RL
 
