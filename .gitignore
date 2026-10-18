@@ -19,3 +19,7 @@ data/
 *.bin
 *.safetensors
 *.gguf
+
+# Private speaker notes: never commit
+Speaker-Notes*.pdf
+**/Speaker-Notes*
